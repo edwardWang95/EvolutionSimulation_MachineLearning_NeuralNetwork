@@ -23,16 +23,23 @@ private:
     int sun;
     int rain;
     int oxy;
+    int nitrogen;
     
     //Resources available
     int food;
     int water;
     
+    //Updating Values deviations and objects
+    int deviation = 5;  //percent
+    
     inline void setRandomValue(int var);
+    inline void calcAvailResources();
+    
+    //update average value for given variable
+    inline void updateVar(int var);
     
 public:
     Land();
-    void calcAvailResources();
     
     void updateAverageValues();
     
